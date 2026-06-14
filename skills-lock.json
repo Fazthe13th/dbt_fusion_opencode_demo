@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "dbt-transformation-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/data-engineering/skills/dbt-transformation-patterns/SKILL.md",
+      "computedHash": "79f3271827f7a29be343a25136dc10778a07435b319c8b45b374c95871785bb3"
+    }
+  }
+}
