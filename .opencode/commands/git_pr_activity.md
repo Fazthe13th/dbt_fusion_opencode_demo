@@ -1,21 +1,36 @@
 ---
-description: Create pull request on git or merge request in gitlab
+description: Create GitHub PR or GitLab MR
 agent: build
 model: ollama/qwen3:14b
-subtask: true
 ---
 
-# Git Pull Request Steps
+Create a pull request or merge request targeting main.
 
-**Instructions**
+Required steps:
 
-1. Inspect the main branch with `git diff` with the feature branch.
-2. Add approprite description and also add points regarding the changes taht we are making to the MR or PR.
-3. You can use this example github PR template:
-```bash
-gh pr create --base main --head <feature_branch_name_here> --title <insert_header_here> --body <description_with_points_here>
-```
-or for gitlab use:
-```bash
-glab mr create --target-branch main --source-branch <feature_branch_name_here> --title <insert_header_here> --description <description_with_points_here>
-```
+1. Get current branch:
+   git branch --show-current
+
+2. Compare changes:
+   git diff main...HEAD
+   git log main..HEAD --oneline
+
+3. Generate:
+   - concise title (<=72 chars)
+   - summary paragraph
+   - bullet list of key changes
+
+4. Detect platform:
+   - use gh if available
+   - otherwise use glab
+
+5. Execute the command.
+
+GitHub:
+gh pr create --base main --head "$BRANCH" --title "$TITLE" --body "$BODY"
+
+GitLab:
+glab mr create --target-branch main --source-branch "$BRANCH" --title "$TITLE" --description "$BODY"
+
+Do not ask for confirmation.
+Execute the command after generating title and body.
