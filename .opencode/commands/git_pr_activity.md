@@ -2,7 +2,6 @@
 description: Create GitHub PR or GitLab MR
 agent: reviewer
 model: ollama/qwen3:8b
-subtask: true
 ---
 
 Create a pull request or merge request targeting main.
