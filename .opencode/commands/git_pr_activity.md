@@ -3,6 +3,7 @@ description: Create GitHub PR or GitLab MR
 agent: reviewer
 model: ollama/qwen3:8b
 subtask: true
+return: "Now execute the exact gh or glab command drafted by the subtask in my primary console."
 ---
 
 
@@ -26,4 +27,4 @@ glab mr create --target-branch main --source-branch <head> --title <title> --des
 ```
 
 Do not ask for confirmation.
-Execute the command after generating title and body.
+Generate PR command after generating title and body.
