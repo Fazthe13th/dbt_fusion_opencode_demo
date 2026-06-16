@@ -1,7 +1,8 @@
 ---
 description: Create GitHub PR or GitLab MR
-agent: build
-model: ollama/qwen3:14b
+agent: reviewer
+model: ollama/qwen3:8b
+subtask: true
 ---
 
 Create a pull request or merge request targeting main.
@@ -32,5 +33,5 @@ gh pr create --base main --head "$BRANCH" --title "$TITLE" --body "$BODY"
 GitLab:
 glab mr create --target-branch main --source-branch "$BRANCH" --title "$TITLE" --description "$BODY"
 
-Do not ask for confirmation.
+Do not ask for confirmation for genearting title and body.
 Execute the command after generating title and body.

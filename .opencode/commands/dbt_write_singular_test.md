@@ -1,7 +1,7 @@
 ---
 description: Create singular dbt tests for complex data quality validations
 agent: tester
-model: ollama/deepseek-r1:8b
+model: ollama/qwen2.5-coder:7b
 subtask: true
 ---
 

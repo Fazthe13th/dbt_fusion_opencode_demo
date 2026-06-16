@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "ollama/qwen3:14b",
+  "model": "ollama/qwen3:8b",
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
@@ -9,25 +9,50 @@
         "baseURL": "http://127.0.0.1:11434/v1"
       },
       "models": {
-        "qwen3:14b": {
-          "name": "Qwen 3 14B (Master Reasoning Planner)",
-          "limit": { "context": 32000, "output": 4000 },
-          "modalities": { "input": ["text"], "output": ["text"] }
+        "qwen3:8b": {
+          "name": "Qwen3 8B (Planner)",
+          "limit": {
+            "context": 64000,
+            "output": 4000
+          },
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "qwen2.5-coder:7b": {
-          "name": "Qwen 2.5 Coder 7B (Coder)",
-          "limit": { "context": 32000, "output": 4000 },
-          "modalities": { "input": ["text"], "output": ["text"] }
-        },
-        "deepseek-r1:8b": {
-          "name": "DeepSeek R1 8B (Reviewer & Tester)",
-          "limit": { "context": 32000, "output": 8000 },
-          "modalities": { "input": ["text"], "output": ["text"] }
+          "name": "Qwen2.5 Coder 7B",
+          "limit": {
+            "context": 64000,
+            "output": 4000
+          },
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "phi4-mini": {
-          "name": "Phi 4 Mini (Doc Writer)",
-          "limit": { "context": 16000, "output": 4000 },
-          "modalities": { "input": ["text"], "output": ["text"] }
+          "name": "Phi4 Mini",
+          "limit": {
+            "context": 16000,
+            "output": 4000
+          },
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         }
       }
     }
