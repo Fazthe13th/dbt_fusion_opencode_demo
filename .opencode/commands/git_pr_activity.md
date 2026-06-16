@@ -1,7 +1,7 @@
 ---
 description: Create GitHub PR or GitLab MR
 agent: reviewer
-model: ollama/qwen3:14b
+model: ollama/qwen3:8b
 subtask: true
 ---
 
