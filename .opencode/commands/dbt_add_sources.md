@@ -1,7 +1,7 @@
 ---
 description: Add new dbt sources configuration based on existing database tables or views
 agent: reviewer
-model: ollama/deepseek-r1:8b
+model: ollama/qwen3:8b
 subtask: true
 ---
 
