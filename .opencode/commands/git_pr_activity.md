@@ -33,5 +33,5 @@ gh pr create --base main --head "$BRANCH" --title "$TITLE" --body "$BODY"
 GitLab:
 glab mr create --target-branch main --source-branch "$BRANCH" --title "$TITLE" --description "$BODY"
 
-Do not ask for confirmation.
+Do not ask for confirmation for genearting title and body.
 Execute the command after generating title and body.
