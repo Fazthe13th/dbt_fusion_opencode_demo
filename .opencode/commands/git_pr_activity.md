@@ -1,7 +1,7 @@
 ---
 description: Create GitHub PR or GitLab MR
 agent: reviewer
-model: ollama/qwen3:8b
+model: ollama/qwen3:14b
 subtask: true
 return: "Now execute the exact gh or glab command drafted by the subtask in my primary console."
 ---

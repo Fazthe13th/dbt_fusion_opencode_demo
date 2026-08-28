@@ -1,7 +1,7 @@
 ---
 description: Generate reusable dbt macros for common patterns, transformations, or custom tests
 agent: coder
-model: ollama/qwen2.5-coder:7b
+model: ollama/qwen2.5-coder:14b
 subtask: true
 ---
 

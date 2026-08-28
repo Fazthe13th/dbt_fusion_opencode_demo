@@ -1,7 +1,7 @@
 ---
 description: Create dbt SQL models following project conventions and best practices
 agent: coder
-model: ollama/qwen2.5-coder:7b
+model: ollama/qwen2.5-coder:14b
 subtask: true
 ---
 

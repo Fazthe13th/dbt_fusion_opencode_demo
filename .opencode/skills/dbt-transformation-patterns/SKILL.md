@@ -94,7 +94,7 @@ Detailed pattern documentation lives in `references/details.md`. Read that file 
 ### Do's
 
 - **Use staging layer** - Clean data once, use everywhere
-- **Test aggressively** - Not null, unique, relationships
+- **Test aggressively** - Not null, unique, relationships6
 - **Document everything** - Column descriptions, model descriptions
 - **Use incremental** - For tables > 1M rows
 - **Version control** - dbt project in Git

@@ -1,42 +1,40 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "ollama/qwen3:8b",
+  "model": "ollama/qwen3:14b",
+  "permission": {
+    "edit": "allow",
+    "bash": "allow",
+    "webfetch": "allow"
+  },
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama (local)",
       "options": {
-        "baseURL": "http://127.0.0.1:11434/v1"
+        "baseURL": "http://127.0.0.1:11434/v1",
+        "temperature": 0.2
       },
       "models": {
-        "qwen3:8b": {
-          "name": "Qwen3 8B (Planner)",
+        "qwen2.5-coder:14b": {
+          "name": "Qwen2.5 Coder 14B",
           "limit": {
-            "context": 16000,
-            "output": 4000
+            "context": 32768,
+            "output": 6000
           },
           "modalities": {
-            "input": [
-              "text"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text"],
+            "output": ["text"]
           }
         },
-        "qwen2.5-coder:7b": {
-          "name": "Qwen2.5 Coder 7B",
+        "qwen3:14b": {
+          "name": "Qwen3 14B (Planner)",
           "limit": {
-            "context": 16000,
-            "output": 4000
+            "context": 32768,
+            "output": 6000
           },
           "modalities": {
-            "input": [
-              "text"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text"],
+            "output": ["text"]
           }
         },
         "phi4-mini": {
@@ -46,14 +44,22 @@
             "output": 4000
           },
           "modalities": {
-            "input": [
-              "text"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text"],
+            "output": ["text"]
           }
         }
+      }
+    }
+  },
+  "model_specifications": {
+    "dbt": {
+      "version": "1.5.0",
+      "strategy": "incremental"
+    },
+    "schema": {
+      "validation": {
+        "null_check": true,
+        "unique_check": ["order_id"]
       }
     }
   }
