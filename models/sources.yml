@@ -1,0 +1,30 @@
+sources:
+  - name: src_tpcds__customer
+    description: Raw customer data from TPCDS dataset
+    schema: tpch_sf10
+    tables:
+      - name: customer
+        description: Customer master data
+        columns:
+          custkey: int
+          name: string
+          address: string
+          phone: string
+          comments: string
+
+  - name: src_tpcds__orders
+    description: Order transaction data from TPCDS dataset
+    schema: tpch_sf10
+    tables:
+      - name: orders
+        description: Order header information
+        columns:
+          orderkey: int
+          custkey: int
+          orderstatus: string
+          totalprice: float
+          orderdate: date
+          orderpriority: string
+          clerk: string
+          shippriority: int
+          comment: string
